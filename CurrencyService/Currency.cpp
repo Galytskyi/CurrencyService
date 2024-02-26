@@ -109,7 +109,7 @@ void CBaseList::copyData(const CBaseList& other)
 CJSONList::CJSONList() 
 {
 	m_type = FormatType::JSON;
-	m_urlPath = "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json";
+	m_urlPath = SOURCE_JSON_PATH;
 	m_localPath = currentDir() + OUTPUT_FILE_PATH + CString(".json");
 }
 
@@ -220,7 +220,7 @@ BOOL CJSONList::save()
 CXMLList::CXMLList() 
 {
 	m_type = FormatType::XML;
-	m_urlPath = "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange";
+	m_urlPath = SOURCE_XML_PATH;
 	m_localPath = currentDir() + OUTPUT_FILE_PATH + CString(".xml");
 }
 

@@ -7,6 +7,9 @@ namespace currency
 
 //--------------------------------------------------------------------------------------------
 
+#define SOURCE_JSON_PATH "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json"
+#define SOURCE_XML_PATH "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange"
+
 #define OUTPUT_FILE_PATH "CurrencyServiceOutput"
 
 //--------------------------------------------------------------------------------------------
