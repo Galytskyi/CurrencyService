@@ -161,18 +161,8 @@ CString currentDir()
 	WCHAR path[MAX_PATH];
     DWORD size = GetModuleFileNameW(NULL, path, MAX_PATH);
 
-	int sp=sizeof(path);
-    while (sp!=0) 
-	{
-        if(path[sp-1]=='\\') 
-		{
-            path[sp]='\0';
-            break;
-        }
-        sp--;
-    }
-
-	return CString(path);
+	CString strPath = CString(path);
+	return strPath.Left(strPath.ReverseFind('\\') + 1);
 }
 
 //--------------------------------------------------------------------------------------------
